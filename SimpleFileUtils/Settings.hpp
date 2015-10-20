@@ -10,10 +10,7 @@ namespace sfu
 class settings
 {
 public:
-	enum mode  { error = 0, duplicate , old , access , write , force };
-
 	settings() : _main_mode(mode::error), _sub_mode(mode::error), _force(mode::error), _hours(0), _path("") { };
-	settings(mode m, mode s, mode f, int h, std::string p) : _main_mode(m), _sub_mode(s), _force(f), _hours(h), _path(p) { };
 	settings(int argc, char ** argv);
 
 	const std::string error_string() const;
@@ -24,12 +21,17 @@ public:
 	bool dupe_active() const { return _main_mode == mode::duplicate; }
 	bool old_active() const { return _main_mode == mode::old; }
 
-	const mode get_mode() const { return _main_mode; }
-	const mode get_sub_mode() const { return _sub_mode; }
-	const int get_hours() const { return _hours; }
-	const std::string get_path() const { return _path; }
+	bool is_write_method() const { return _sub_mode == mode::write; }
+	bool is_access_method() const { return _sub_mode == mode::access; }
+
+	int get_hour_limit() const { return _hours; }
+	std::string get_path() const { return _path; }
+	//mode get_mode() const { return _main_mode; }
+	//mode get_sub_mode() const { return _sub_mode; }
 
 private:
+	enum mode  { error = 0, duplicate, old, access, write, force };
+
 	const std::string check_given_dir(const char * cstr);
 
 	mode _main_mode;

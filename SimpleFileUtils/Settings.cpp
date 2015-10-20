@@ -6,11 +6,12 @@ namespace sfu
 const std::string settings::error_string() const
 {
 	return "Error: Incorrect or Incomplete arguments supplied.\n"
-		   "d";
+		   "Please read \"what - is.txt\" for more information.";
 }
 
 settings::settings(int argc, char ** argv) : settings::settings()
 {
+	//print statements are for debugging
 	std::cout << "argc: " << argc << std::endl;
 	for (int i = 0; i != argc; ++i)
 	{

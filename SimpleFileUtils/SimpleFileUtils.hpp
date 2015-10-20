@@ -1,6 +1,8 @@
 #ifndef SFU_SFU_HPP
 #define SFU_SFU_HPP
 
+#include "Settings.hpp"
+
 #include <boost/filesystem.hpp>
 #include "boost/date_time/gregorian/gregorian.hpp"
 
@@ -25,9 +27,9 @@ void get_dupes_from_files(const std::vector<fs::path> &files, std::vector<fs::pa
 
 void delete_files(const std::vector<fs::path> &paths);
 
-bool remove_duplicate_files(const std::vector<fs::path> &files); //returns true if successful, false otherwise
+bool remove_duplicate_files(const std::vector<fs::path> &files, const sfu::settings &settings); //returns true if successful, false otherwise
 
-bool file_times(const std::vector<fs::path> &files); //returns true if successful, false otherwise
+bool file_times(const std::vector<fs::path> &files, const sfu::settings &settings); //returns true if successful, false otherwise
 
 } //namespace sfu
 #endif 

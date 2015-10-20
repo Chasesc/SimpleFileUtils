@@ -1,0 +1,26 @@
+SimpleFileUtils currently has two main functions:
+
+1.)  removing duplicate files in a directory
+	
+	Example: Sample directory includes a.mp3, a (Copy).mp3, a(1).mp3, a.txt
+			 a (Copy).mp3 and a(1).mp3 would be removed.
+
+	Command line syntax:
+	SimpleFileUtils -d "path_to_directory"
+
+
+2.) removing old files in a directory
+
+	This removes files older than the amount of days you specify.
+
+	Command line syntax:
+	SimpleFileUtils -o (-a OR -w) h "path_to_directory"
+
+	where:
+	-a = file ages are defined by the last time you accessed them (Currently unsupported)
+	-w = file ages are defined by the last time you wrote to them.
+	h  = the amount of integer hours.  Anything greater than this amount is defined as an old 	     file. 
+
+
+NOTE: The default setting asks you to confirm before deleting the files.
+	  If you wish to have no confirmation, simply append "-f" to any command
