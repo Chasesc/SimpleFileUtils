@@ -19,8 +19,8 @@ SimpleFileUtils currently has two main functions:
 	where:
 	-a = file ages are defined by the last time you accessed them (Currently unsupported)
 	-w = file ages are defined by the last time you wrote to them.
-	h  = the amount of integer hours.  Anything greater than this amount is defined as an old 	     file. 
+	h  = the amount of integer hours.  Anything greater than this amount is defined as an old file. 
 
 
 NOTE: The default setting asks you to confirm before deleting the files.
-	  If you wish to have no confirmation, simply append "-f" to any command
+      If you wish to have no confirmation, simply append "-f" to the arguments.

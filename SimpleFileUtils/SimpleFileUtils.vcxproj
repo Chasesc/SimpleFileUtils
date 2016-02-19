@@ -71,13 +71,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DuplicateRemover.cpp" />
+    <ClCompile Include="OldRemover.cpp" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SimpleFileUtils.cpp" />
+    <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BoostCore.hpp" />
+    <ClInclude Include="DuplicateRemover.hpp" />
+    <ClInclude Include="OldRemover.hpp" />
     <ClInclude Include="Settings.hpp" />
     <ClInclude Include="SimpleFileUtils.hpp" />
+    <ClInclude Include="Util.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
