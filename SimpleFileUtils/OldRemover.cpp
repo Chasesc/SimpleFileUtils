@@ -26,6 +26,10 @@ namespace sfu
 		{
 			util::delete_files(old_files);
 		}
+		else
+		{
+			return false;
+		}
 
 		return true;
 	}

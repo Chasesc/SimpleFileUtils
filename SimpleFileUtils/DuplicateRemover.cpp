@@ -32,6 +32,10 @@ namespace sfu
 		{
 			util::delete_files(dupe_files);
 		}
+		else
+		{
+			return false;
+		}
 
 		return true;
 	}
